@@ -127,3 +127,11 @@ nav ul li:hover{
 
 /* Services
 -----------------------------*/
+.services {
+    background: #730404 url('/images/services.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    padding: 30px 0;
+    font-weight: 500;
+}
