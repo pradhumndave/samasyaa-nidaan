@@ -1,9 +1,11 @@
 @font-face {
-    font-family: hindi;
-    src: url("KRDEV500.TTF");
+    font-family: "Kruti 500";
+    src: url("/fonts/Kruti-Dev-500-Regular.ttf") format("ttf"),
 }
-@import url('https://fonts.googleapis.com/css2?family=Amita:wght@700&family=Martel+Sans:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&display=swap');
+@font-face{
+    font-family: 'Pankaj';
+    src: url('/fonts/PankajBold-lrnX.ttf') format('ttf');
+}
 /*Global Styles
 -----------------------------*/
 html{
@@ -24,11 +26,11 @@ li{
 }
 h1 {
     font-size: 3em;
-    font-family: 'Amita', cursive;
+    font-family: 'Pankaj', cursive;
 }
 h2{
     font-size: 2em;
-    font-family: 'Amita', cursive;
+    font-family: 'Kruti 500', cursive;
 }
 h3 {
     font-size: 1.5em;
@@ -50,7 +52,7 @@ p {
 /* Header
 -----------------------------*/
 header {
-    font-family: 'Amita', cursive;
+    font-family: 'Kruti 500', cursive;
     font-size: 27px;
     background: #730404 center/cover url('/images/header.jpg') no-repeat;
     color: #ff7800;
@@ -65,6 +67,15 @@ header h1{
 -----------------------------*/
 nav{
     background: #ff7800;
+}
+.nav-link {
+    padding: 0;
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex;
+        justify-content: center;
+    }
 }
 nav ul{
     display: flex;
@@ -86,6 +97,9 @@ nav .content-wrap{
 nav ul li:hover{
     background: #ff4100;
     cursor: pointer;
+}
+nav a:visited{
+    color: rgba(0,0,0,0.9);
 }
 
 /* About
@@ -109,7 +123,8 @@ nav ul li:hover{
     margin-right: 20px;
 }
 .about-item h2, .about-item h3 {
-    margin: 0;
+    line-height: 1.5;
+    font-family: "Pankaj";
 }
 .about-item p{
     max-width: 600px;
@@ -129,9 +144,80 @@ nav ul li:hover{
 -----------------------------*/
 .services {
     background: #730404 url('/images/services.jpg') no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     color: #fff;
-    padding: 30px 0;
+    padding: 30px 0 40px;
     font-weight: 500;
+}
+.services h1 {
+    font-family: 'Pankaj', cursive;
+    text-align: center;
+}
+.service-item {
+    padding: 80px 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3em;
+}
+.service-item > div {
+    max-width: 390px;
+    text-align: center;
+    text-shadow: 2px 1px 1px red;
+}
+.service-item > div > img {
+    -webkit-box-shadow: 0px 0px 33px 7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 33px 7px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 33px 7px rgba(0,0,0,0.75);
+}
+.service-item {
+    margin: 10px 0 0;
+}
+.service-item h3 {
+    margin-top: 1.4rem;
+}
+.service-design {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+/* Contact
+-----------------------------*/
+.contact {
+    background: #730404 url('/images/contact-bg.jpg') no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    color: #fff;
+    padding: 50px 0;
+    font-weight: 500;
+}
+.contact h1 {
+    font-family: 'Kruti 500', cursive;
+    text-align: center; 
+}
+.contact h3 {
+    font-family: 'Pankaj', cursive;
+    margin: auto;
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.5;
+}
+.contact-inner {
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-form {
+    background: #ff7800;
+    padding: 2rem 1rem;
+    color: #270101;
+}
+/* Footer
+-----------------------------*/
+footer {
+    background: #270101;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
 }
