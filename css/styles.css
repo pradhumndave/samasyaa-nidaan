@@ -60,7 +60,7 @@ textarea {
 -----------------------------*/
 header {
     font-family: 'Kruti 500', cursive;
-    background: #730404 center/cover url('/images/header.jpg') no-repeat;
+    background: #730404 center/cover url('../images/header.jpg') no-repeat;
     color: #ff7800;
     text-shadow: 4px 1px 2px red;
     text-align: center;
@@ -111,7 +111,7 @@ nav a:visited{
 /* About
 -----------------------------*/
 .about {
-    background: #730404 url('/images/about-bg.jpg') no-repeat;
+    background: #730404 url('../images/about-bg.jpg') no-repeat;
     background-position: center;
     background-size: cover;
     color: #fff;
@@ -145,7 +145,7 @@ nav a:visited{
 /* Services
 -----------------------------*/
 .services {
-    background: #730404 url('/images/services.jpg') no-repeat;
+    background: #730404 url('../images/services.jpg') no-repeat;
     background-position: bottom;
     background-size: cover;
     color: #fff;
@@ -179,7 +179,7 @@ nav a:visited{
 /* Contact
 -----------------------------*/
 .contact {
-    background: #730404 url('/images/contact-bg.jpg') no-repeat;
+    background: #730404 url('../images/contact-bg.jpg') no-repeat;
     background-position: bottom;
     background-size: cover;
     color: #fff;
