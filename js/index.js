@@ -9,11 +9,17 @@ submitbtn.addEventListener('click', (e)=>{
     var address = document.getElementById('address').value;
     var question = document.getElementById('question').value;
 
-    db.collection('users').doc().set({
-        fullName,
-        mobile,
-        address,
-        question,
-    }).then(()=>{location.assign('/index.html')})
-        .catch((e)=>console.log(e))
+    if (fullName!=='' && mobile!=='' && address!=='' && question!==''){
+        db.collection('users').doc().set({
+            fullName,
+            mobile,
+            address,
+            question,
+        }).then(()=>{location.assign('/index.html')})
+            .catch((e)=>console.log(e))
+
+    } else {
+        alert('Check all the fields')
+    }
+
 })
