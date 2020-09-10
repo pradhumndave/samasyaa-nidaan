@@ -9,6 +9,7 @@ submitbtn.addEventListener('click', (e)=>{
     var address = document.getElementById('address').value;
     var question = document.getElementById('question').value;
 
+<<<<<<< HEAD
     if (fullName!=='' && mobile!=='' && address!=='' && question!==''){
         db.collection('users').doc().set({
             fullName,
@@ -22,4 +23,13 @@ submitbtn.addEventListener('click', (e)=>{
         alert('Check all the fields')
     }
 
+=======
+    db.collection('users').doc().set({
+        fullName,
+        mobile,
+        address,
+        question,
+    }).then(()=>{location.assign('/')})
+        .catch((e)=>console.log(e))
+>>>>>>> e48132bb9d2c504eb262057f73a995c2e2b952c2
 })
