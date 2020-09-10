@@ -134,26 +134,26 @@
                 <section class="contact-inner">
                     <article class="contact-form">
                         <h3>परामर्श हेतु दिए गए QR Code पर Rs 500/- जमा करवाए |</h3><br/>
-                        <form>
+                        <form id="form">
                             <div class="form-group">
                               <label for="name">पूरा नाम</label>
-                              <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                              <input type="text" class="form-control" id="name" placeholder="Name" required aria-describedby="emailHelp">
                             </div>
                             <div class="form-group">
                               <label for="mobile">मोबाइल नंबर</label>
-                              <input type="number" class="form-control" id="mobile">
+                              <input type="number" class="form-control" placeholder="Contact number" required id="mobile">
                             </div>
                             <div class="form-group">
                               <label for="address">पता</label>
                               <br/>
-                              <textarea name="address" id="address" cols="80" rows="4">Address</textarea>
+                              <textarea name="address" id="address" rows="4" placeholder="Address" required></textarea>
                             </div>
                             <div class="form-group">
                               <label for="question">प्रश्न</label>
                               <br/>
-                              <textarea name="question" id="question" cols="80" rows="4">Ask a question here....</textarea>
+                              <textarea name="question" id="question" rows="4" placeholder="Ask a question here...." required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button id="submit" class="btn btn-primary">Submit</button>
                           </form>
                     </article>
                     <article>
@@ -171,4 +171,22 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+<script>
+    var firebaseConfig = {
+    apiKey: "AIzaSyDp5dU-zNvpKDrO1DyEvyK69Tk5uOLMEyw",
+    authDomain: "nandkripa-nidaan.firebaseapp.com",
+    databaseURL: "https://nandkripa-nidaan.firebaseio.com",
+    projectId: "nandkripa-nidaan",
+    storageBucket: "nandkripa-nidaan.appspot.com",
+    messagingSenderId: "135988653362",
+    appId: "1:135988653362:web:cf3fc10ff5db5ecd95bb2b",
+    measurementId: "G-LQVPCJNJ4J"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
+<script src="./js/index.js"></script>
 </html>

@@ -38,6 +38,13 @@ h3 {
 p {
     font-family: 'Martel Sans', sans-serif;
 }
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 100%;
+}
 .section {
     padding: 70px 0;
     position: relative;
@@ -53,7 +60,6 @@ p {
 -----------------------------*/
 header {
     font-family: 'Kruti 500', cursive;
-    font-size: 27px;
     background: #730404 center/cover url('/images/header.jpg') no-repeat;
     color: #ff7800;
     text-shadow: 4px 1px 2px red;
@@ -113,9 +119,6 @@ nav a:visited{
     font-weight: 500;
 }
 .about-item{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     text-align: right;
 }
 .guru {
@@ -133,7 +136,6 @@ nav a:visited{
 .about-item:last-child {
     padding: 150px 0 0;
     text-align: left;
-    flex-direction: row-reverse;
 }
 .pandit {
     float: right;
@@ -154,14 +156,7 @@ nav a:visited{
     font-family: 'Pankaj', cursive;
     text-align: center;
 }
-.service-item {
-    padding: 80px 0 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 3em;
-}
 .service-item > div {
-    max-width: 390px;
     text-align: center;
     text-shadow: 2px 1px 1px red;
 }
@@ -204,9 +199,11 @@ nav a:visited{
 }
 .contact-inner {
     padding-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+}
+.contact-inner img {
+    -webkit-box-shadow: 0px 0px 33px 7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 33px 7px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 33px 7px rgba(0,0,0,0.75);
 }
 .contact-form {
     background: #ff7800;
@@ -220,4 +217,78 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
+}
+
+@media screen and (min-width:750px) {
+    .header{
+        font-size: 27px;
+    }
+    .about-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .about-item:last-child{    
+        flex-direction: row-reverse;
+    }
+    .service-item{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3em;
+        padding: 80px 0 0;
+    }
+    .service-item>div{    
+        max-width: 390px;
+    }
+    .contact-inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width:749px) {
+    .header{
+        font-size: 22px;
+    }
+    .about{
+        font-size: 1rem;
+    }
+    .about-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-item:last-child{
+        padding: 20px 0 0;
+        flex-direction: column;
+        text-align: center;
+    }
+    .about img{
+        padding: 2rem;
+    }
+    .service-item{
+        padding: 20px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .service-item>div{    
+        max-width: 250px;
+    }
+    .services h1 {
+        margin-bottom: 30px;
+    }
+    .service-item img {
+        width: 200px;
+    }
+    .service-item>div>h3{
+        font-size: 1rem;
+    }
+    .contact-inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
