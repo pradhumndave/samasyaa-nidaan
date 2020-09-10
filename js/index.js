@@ -14,6 +14,6 @@ submitbtn.addEventListener('click', (e)=>{
         mobile,
         address,
         question,
-    }).then(()=>{location.assign('/index.html')})
+    }).then(()=>{location.assign('/')})
         .catch((e)=>console.log(e))
 })
