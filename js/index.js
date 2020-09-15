@@ -16,7 +16,7 @@ submitbtn.addEventListener('click', (e)=>{
             address,
             question,
         }).then(()=>{location.assign('/index.html')})
-            .catch((e)=>console.log(e))
+            .catch((err)=>console.log(err))
 
     } else {
         alert('Check all the fields')
