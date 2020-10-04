@@ -55,6 +55,11 @@ textarea {
     margin: 0 auto;
     padding: 10px 0;
 }
+.bottomside{
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+}
 
 /* Header
 -----------------------------*/
@@ -249,6 +254,9 @@ footer {
 @media screen and (max-width:749px) {
     .header{
         font-size: 22px;
+    }
+    .bottomside img{
+        width: 56px;
     }
     .about{
         font-size: 1rem;
